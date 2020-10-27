@@ -1,0 +1,104 @@
+.main-container {
+    margin-top: 1%;
+}
+
+
+.list {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    
+}
+
+.list-item {
+    display: flex;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    background-color: #BDE6F7;
+    cursor: pointer;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.list-item:hover {
+    background-color: #fff;
+}
+
+.list-item span {
+    border-right: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+}
+
+
+#list-columns {
+    border-bottom: 1px solid lightgray;
+    font-weight: bold;
+    background-color: #0B42F3;
+    color: #fff
+
+}
+
+
+#id{
+    width: 2.5%;
+    border-left: 1px solid lightgray;
+}
+
+#fn {
+    width: 10%;
+}
+
+#ln {
+    width: 10%;
+}
+
+#email {
+    width: 20%;
+}
+
+#hire {
+    width: 8%;
+}
+
+#comp {
+    width: 10%;
+}
+
+
+#role {
+    width: 15%;
+}
+
+#phone {
+    width: 8%;
+}
+
+#salary {
+    width: 5%;
+}
+
+#update {
+    width: 6%;
+    cursor: pointer;
+}
+
+#delete {
+    width: 6%;
+    cursor: pointer;
+}
+
+#update img {
+    width: 40%;
+    height: 10%;
+}
+
+#delete img {
+    width: 40%;
+    height: 10%;
+}

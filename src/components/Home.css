@@ -1,0 +1,120 @@
+.main-container-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.ndd-container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-self: center;
+}
+
+.title-container {
+    display: flex;
+    width: 100%;
+
+}
+
+.leftTitle{
+    display: flex;  
+    gap:10px;  
+    width: 80%;
+}
+
+.leftTitle span {
+    font-size: 1.2em;
+    font-weight: bold;
+    align-self: center;
+    align-self: center;
+}
+
+.leftTitle img {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+}
+
+.search{
+    display: flex;
+    gap:0px;
+    width: 20%;
+    justify-content: center;
+    align-content: center;
+}
+
+
+
+.search span {
+    background-color: lightgray;
+    width: 40px;
+    height: 35px;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    align-self: center;
+}
+
+#searchIcon{
+    width: 30px;
+    height: 30px;
+    margin-top: 10%;
+    margin-left: 8%;
+}
+
+.no-found-message{
+    font-size: 2.5em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: lightgray;
+    justify-self: center;
+    align-self: center;
+    margin-top: 2%;
+}
+
+.actions-filters-container{
+    width: 100%;
+    display: flex;
+    gap:10px;
+}
+
+.actions-filters-container button{
+    border-radius: 5px;
+
+    color: #fff;
+    height:55px;
+    width:170px;
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 1em;
+}
+
+.actions-filters-container button span{
+    align-self: center;
+}
+
+#addAction {
+    width:25px;
+    height:25px;
+    justify-self: center;
+    align-self: center;
+}
+
+#dropIcon{
+    width:50px;
+    height:50px;
+    margin-top: -12%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:960px){
+    .leftTitle{
+        width: 50%;
+    }
+
+    .search {
+        width: 50%;
+    }
+}

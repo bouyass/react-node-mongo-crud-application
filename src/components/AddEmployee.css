@@ -1,0 +1,167 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width:100%px;
+
+}
+.nd-container{
+    display: flex;
+    margin: auto;
+    padding: 4%;
+    flex-direction: column;
+    gap: 15px;
+    width:50%;
+    min-height: 500px;
+    align-self: center;
+}
+
+.title-container {
+    display: flex;
+    gap:10px;
+    width: 100%;
+}
+
+.title-container img {
+    width: 40px;
+    height:40px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    width:100%;
+}
+
+.form-container .name {
+    display: flex;
+    width: 100%;
+    gap:10px;
+}
+
+.work-details {
+    display: flex;
+    gap:10px;
+}
+
+.details-bis {
+    display: flex;
+    gap:10px;
+}
+
+#dataPicker {
+    border: 2px solide green;
+    
+}
+
+.react-date-picker__wrapper {
+    border: 1px solid #B2B4B2;
+    border-radius: 5px;
+    height:40px;
+}
+
+hr {
+    border: 0;
+    width: 100%;               
+    background-color:#B2B4B2;
+    height: 2px;
+}
+
+.image{
+    display: flex;
+    width: 100%;
+}
+
+#imageLabel{
+    border: 2px solid #ced4da;
+    border-radius: 5px;
+    height:40px;
+    width:150px;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    gap:2%;
+    border-left: none;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+#imageLabel span {
+    
+}
+
+#avatarIcon{
+    width: 30px;
+    height: 30px;
+}
+
+#imageSpan{
+    height: 40px;
+    background-color:#ced4da;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    min-width:120px;
+    
+}
+
+#image {
+    width:0%;
+    margin-right: 10px;    
+}
+
+#imageSpan span {
+    width: 80%;
+    justify-self: center;
+    align-self: center;
+}
+
+#pathShow{
+    justify-self: center;
+    align-self: center;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width:760px){
+    .nd-container{
+        width: 100%;
+        margin-top: 2%;
+    }
+
+
+    .work-details {
+        flex-direction: column;
+    }
+
+    .details-bis {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:960px){
+    .nd-container{
+        width: 80%;
+        margin-top: 8%;
+    }
+
+    .name {
+        flex-direction: column;
+    }
+
+    .work-details {
+    flex-direction: column;
+    }
+
+    .details-bis {
+        flex-direction: column;
+    }
+}
+
