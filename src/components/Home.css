@@ -95,6 +95,12 @@
     align-self: center;
 }
 
+.employees-list-container {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
 #addAction {
     width:25px;
     height:25px;
@@ -107,6 +113,27 @@
     height:50px;
     margin-top: -12%;
     cursor: pointer;
+}
+
+.paginationImage {
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page-number {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.page-number:hover {
+    color:skyblue;
+    font-size: 1.5em;
 }
 
 @media screen and (max-width:960px){

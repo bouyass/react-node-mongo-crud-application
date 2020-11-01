@@ -11,6 +11,7 @@ export const companyOptions = [
     { key: 'as', value: 'as', text: 'Asus' },
 ]
 
+
 export const roleOptions = [
     { key: 'mt', value: 'mt', text: 'Marketing Technologist' },
     { key: 'sc', value: 'sc', text: 'Seo Consultant' },
@@ -31,7 +32,7 @@ export const roleOptions = [
 ]
 
 export const columns = [
-    { title: 'id', prop: 'id'  },
+    { title: 'Avatar', prop: 'image'  },
     { title: 'First name', prop: 'firstName' },
     { title: 'Last name', prop: 'lastName' },
     { title: 'Email', prop: 'email' },

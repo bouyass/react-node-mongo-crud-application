@@ -6,6 +6,7 @@ import './UpdateEmployee.css'
 export default function AddEmployee() {
 
     const [imageValue, setImageValue] = useState('')
+    const [employeeId, setEmployeeId] = useState('')
 
     const handleChange = (e) => {
         setImageValue(e.target.value)
@@ -18,7 +19,8 @@ export default function AddEmployee() {
     useEffect(() => {
         const companies = document.getElementById('selectCompany')
         const roles = document.getElementById('selectRoles')
-        
+        const url = new URL(window.location.href)
+        setEmployeeId( url.searchParams.get('id') )
         companyOptions.map(item => {
             var child = document.createElement("option")
             child.setAttribute('value', item.value)
