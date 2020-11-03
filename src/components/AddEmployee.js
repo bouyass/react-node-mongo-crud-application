@@ -53,7 +53,7 @@ export default function AddEmployee() {
     }
 
     const companyChange = (e) => {
-        setCompany(e.target.value)
+        setCompany(e.target.children)
     }
 
     const roleChange = (e) => {
@@ -99,7 +99,7 @@ export default function AddEmployee() {
         
         companyOptions.map(item => {
             var child = document.createElement("option")
-            child.setAttribute('value', item.value)
+            child.setAttribute('value', item.text)
             var text = document.createTextNode(item.text)
             child.appendChild(text)
             companies.appendChild(child)
@@ -107,7 +107,7 @@ export default function AddEmployee() {
 
         roleOptions.map(item => {
             var child = document.createElement("option")
-            child.setAttribute('value', item.value)
+            child.setAttribute('value', item.text)
             var text = document.createTextNode(item.text)
             child.appendChild(text)
             roles.appendChild(child)

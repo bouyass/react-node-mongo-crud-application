@@ -139,6 +139,7 @@
 .page-number {
     font-size: 1.2em;
     cursor: pointer;
+    color: #0B42F3;
 }
 
 .page-number:hover {

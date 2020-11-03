@@ -44,6 +44,7 @@
 #id{
     width: 3%;
     border-left: 1px solid lightgray;
+    
 }
 
 #fn {
@@ -55,11 +56,13 @@
 }
 
 #email {
-    width: 20%;
+    width: 17%;
 }
 
 #hire {
-    width: 8%;
+    width: 12%;
+    overflow-x: hidden;
+    
 }
 
 #comp {
