@@ -32,10 +32,7 @@ function EmployeeItem(props) {
         method: 'DELETE'
     }
 
-    const updateOptions = {
-        url: 'http://localhost:8000/updateOne/',
-        method: 'put'
-    }
+
 
     const goUpdate = (e) => {
         window.location.replace('/update?id='+e.target.id)

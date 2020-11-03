@@ -14,6 +14,7 @@ function Home() {
     const [nbrPages, setNbrPages] = useState(0)
     const [pages, setPages] = useState([])
 
+
     const AddEmployee = () => {
         window.location.replace('/add')
     }
@@ -27,26 +28,54 @@ function Home() {
         setFilterModal(true)
     }
 
-    const changePage = () => {
-
+    const changePage = (e) => {
+        setShownEmployees(employees.slice((e.target.id*nbrItems),(e.target.id*nbrItems) + nbrItems))
     }
 
 
     var pages_temp=[]
 
-    useEffect(() => {
+    const getData = () => {
         axios.request(options).then((response) => {
+            console.log(response.data.length)
             setEmployees(response.data)
             setShownEmployees(response.data.slice(0, nbrItems))
-            response.data.length%nbrItems > 0 ? setNbrPages((response.data.length/nbrItems)+1) : setNbrPages(response.data.length/nbrItems) 
+            if(response.data.length > nbrItems){
+                if(response.data.length%nbrItems > 0){
+                    setNbrPages((response.data.length/nbrItems)+1)
+                    for(let i = 0; i < ((response.data.length/nbrItems));i++){
+                        pages_temp.push(i)
+                    }
+                    setPages(pages_temp)
+                }else{
+    
+                    setNbrPages(response.data.length/nbrItems) 
+                    for(let i = 0; i < (response.data.length/nbrItems);i++){
+                        pages_temp.push(i)
+                        
+                    }
+                   
+                    setPages(pages_temp)
+                }    
+            }else {
+                setNbrPages(0)
+                setPages([0])
+            }
+                
+             
         }).catch((error) => console.log(error))
-        console.log(nbrPages)
-        for(let i=0;i<nbrPages;i++){
-            pages_temp.push(i)
-        }
-        console.log(pages_temp.length)
-        setPages(pages_temp)
+    }
+
+    
+
+
+    useEffect(() => {
+
+        getData()
+
     },[])
+
+
  
 
     return (
@@ -64,14 +93,14 @@ function Home() {
             <hr />
             <div className="employees-list-container">
                 <EmployeeItem data={shownEmployees} />
-                {shownEmployees.length > 0 ?
+                {shownEmployees.length > 0 && pages.length > 1 ?
                 <div className="pagination">
                     <img className="paginationImage" src="images/double-left-chevron.jpg" /> 
-                    <img  className="paginationImage" src="images/left-chevron.png"/>
+                    <img  className="paginationImage1" src="images/left-chevron.png"/>
                 {
-                    pages.map(item => { return <span className="page-number" onClick={changePage} key={item}> {item}&nbsp;&nbsp;  </span> })
+                    pages.map(item => { return <span className="page-number" id={item} onClick={changePage} key={item}> {item}&nbsp;&nbsp;  </span> })
                 }
-                    <img className="paginationImage" src="images/right-chevron.png" /> 
+                    <img className="paginationImage1" src="images/right-chevron.png" /> 
                     <img className="paginationImage" src="images/double-right-chevron.png" />
                 </div>
                 : '' }
