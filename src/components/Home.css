@@ -147,6 +147,32 @@
     font-size: 1.5em;
 }
 
+#minSalaryInput{
+    width: 73%;
+    font-weight: bold;
+}
+
+#maxSalaryInput{
+    width: 73%;
+    font-weight: bold;
+}
+
+.minSalaryFilter {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.maxSalaryFilter {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width:960px){
     .leftTitle{
         width: 50%;
